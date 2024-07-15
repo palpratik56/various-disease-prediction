@@ -44,18 +44,13 @@ st.write(input_df)
 
 # Make predictions
 prediction = model.predict(input_df)
-prediction_proba = model.predict_proba(input_df)
+prediction_proba = model.predict_proba(input_df)[0][prediction[0]]
 
 # Display prediction
 if st.button('Predict'):
     st.subheader('Prediction:')
     if prediction[0] == 1:
-        st.warning('The model predicts that the individual has diabetes',icon="⚠️")
+        st.warning(f'The model predicts that the individual has diabetes with Probability {prediction_proba:.3f}',icon="⚠️")
     else:
-        st.success('The model predicts that the individual does not have diabetes',icon="✅")
-
-# Display prediction probability
-# st.subheader('Prediction Probability:')
-st.write(f'Probability of having diabetes: {prediction_proba[0][1]:.2f}')
-st.write(f'Probability of not having diabetes: {prediction_proba[0][0]:.2f}')
-
+        st.success(f'The model predicts that the individual does not have diabetes with Probability {prediction_proba:.3f}',icon="✅")
+ 
