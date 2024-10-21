@@ -8,7 +8,7 @@
 
 ## Project Overview
 
-The **Various Disease Prediction** project aims to implement solutions for different biomedical disease prediction problems in a simple yet effective manner. This project utilizes **Streamlit** for deployment, providing an interactive web application where users can input data and receive predictions based on the implemented models.
+The **Various Disease Prediction** project aims to implement solutions for different biomedical disease prediction problems (Breast cancer,Kidney stone,diabetes) in a simple yet effective manner. This project utilizes **Streamlit** for deployment, providing an interactive web application where users can input data and receive predictions based on the implemented models.
 
 ## Features
 
